@@ -22,8 +22,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`${inter.className} bg-dark-1`}>
-          {children}
-          {/* <header>
+          <header>
             <SignedOut>
               <SignInButton />
             </SignedOut>
@@ -31,9 +30,7 @@ export default function RootLayout({
               <UserButton />
             </SignedIn>
           </header>
-          <main>
-            {children}
-          </main> */}
+          <main>{children}</main>
         </body>
       </html>
     </ClerkProvider>
