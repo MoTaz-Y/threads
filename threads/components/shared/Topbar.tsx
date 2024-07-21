@@ -9,6 +9,7 @@ import {
 } from "@clerk/nextjs";
 import Link from "next/link";
 import Image from "next/image";
+import { dark } from "@clerk/themes";
 export default function Topbar() {
   return (
     <nav className="topbar">
@@ -28,6 +29,7 @@ export default function Topbar() {
       </div>
       <OrganizationSwitcher
         appearance={{
+          baseTheme: dark,
           elements: {
             OrganizationSwitcherTrigger: "py-2 px-4",
           },

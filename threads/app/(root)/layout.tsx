@@ -30,7 +30,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={`${inter.className} bg-dark-1`}>
           <Topbar />
-          <main>
+          <main className="flex flex-row">
             <LeftSidebar />
 
             <section className="main-container">

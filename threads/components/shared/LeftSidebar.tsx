@@ -4,6 +4,14 @@ import { sidebarLinks } from "@/constants";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
+import {
+  ClerkProvider,
+  OrganizationSwitcher,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 export default function LeftSidebar() {
   const router = useRouter();
   const pathname = usePathname();
@@ -30,6 +38,15 @@ export default function LeftSidebar() {
             </Link>
           );
         })}
+      </div>
+      <div className="mt-10 px-6 flex cursor-pointer gap-4 p-4">
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
+        <p className="text-light-2 max-lg:hidden"> Profile</p>
       </div>
     </section>
   );
